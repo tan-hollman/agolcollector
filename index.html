@@ -25,7 +25,7 @@
 
     <!--loading esri modules-->
     <script>
-        require(["esri/config", "esri/Map", "esri/views/MapView"], (esriConfig, Map, MapView) => {
+        require(["esri/config", "esri/Map", "esri/views/MapView", "esri/widgets/Locate", "esri/widgets/Search"], (esriConfig, Map, MapView, Locate, Search) => {
             //adding API key
                 esriConfig.apiKey = "AAPK5c4b46937c724a85bafafb4e90db2ef8FulouvcXphhvck6dUoP3w0m88XyT223SeoG7XCVjKvxBWfXmFpVhYYFUJevt3N3r";
 
@@ -39,6 +39,26 @@
                 map: map, // References the map object
                 center: [-82.3557, 29.6439], // Sets default center of map to University of Florida
                 zoom: 15 // Sets default zoom level
+            });
+
+            const locateBtn = new Locate({
+                view: view
+            });
+
+            // Add the locate widget to the top left corner of the view
+            view.ui.add(locateBtn, {
+                position: "top-left"
+            });
+
+            const searchWidget = new Search({
+                view: view
+            });
+            
+            // Adds the search widget below other elements in
+            // the top left corner of the view
+            view.ui.add(searchWidget, {
+                position: "top-left",
+                index: 2
             });
         });
     </script>
