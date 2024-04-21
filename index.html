@@ -23,8 +23,8 @@
         .addRecordBtn {
             position: absolute;
             z-index: 10;
-            bottom: 10px;
-            left: 10px;
+            top: 10px;
+            right: 10px;
             background-color: #0079c1;
             color: white;
             padding: 8px 16px;
@@ -77,7 +77,7 @@
 
             // Add the search widget to the top right corner of the view
             view.ui.add(searchWidget, {
-                position: "top-right",
+                position: "top-middle",
             });
 
             const layer = new FeatureLayer({
