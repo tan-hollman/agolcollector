@@ -17,6 +17,27 @@
             height: 100%;
             width: 100%;
         }
+        
+        <!--Adding css for survey button-->
+
+        .addRecordBtn {
+            position: absolute;
+            z-index: 10;
+            top: 10px;
+            right: 10px;
+            background-color: #0079c1;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .addRecordBtn:hover {
+            background-color: #005a87;
+        }
     </style>
     
     <!--importing css and esri.js libraries-->
@@ -70,6 +91,7 @@
 </head>
 
 <body>
+    <a href="https://arcg.is/1KPmuj0" target="_blank" class="addRecordBtn">Add Record</a>
     <div id="viewDiv"></div>
 </body>
 
