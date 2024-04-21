@@ -25,9 +25,9 @@
 
     <!--loading esri modules-->
     <script>
-        require(["esri/Config", "esri/Map", "esri/views/MapView"], (esriConfig, Map, MapView) => {
+        require(["esri/config", "esri/Map", "esri/views/MapView"], (esriConfig, Map, MapView) => {
             //adding API key
-            esri.Config.apiKey = "AAPK5c4b46937c724a85bafafb4e90db2ef8FulouvcXphhvck6dUoP3w0m88XyT223SeoG7XCVjKvxBWfXmFpVhYYFUJevt3N3r";
+                esriConfig.apiKey = "AAPK5c4b46937c724a85bafafb4e90db2ef8FulouvcXphhvck6dUoP3w0m88XyT223SeoG7XCVjKvxBWfXmFpVhYYFUJevt3N3r";
 
             const map = new Map({
                 container: "viewDiv",
